@@ -14,6 +14,7 @@ section {
     width: 100%;
     height: 100%;
     background-color: rgba(5, 5, 15, 0.831);
+    /* transform: scale(2); */
 }
 
 .d-flex-center {
@@ -31,11 +32,10 @@ section {
     border-radius: 50%;
     background-color: yellow;
     background-image: radial-gradient(closest-corner, yellow 0%, rgb(255, 255, 89) 50%, yellow 100%);
-    box-shadow: 0px 0px 19.9px rgb(255, 255, 89),
-        0px 0px 55.1px yellow,
-        0px 0px 132.6px yellow,
-        0px 0px 440px yellow,
-        0px 0px 500px 50px rgb(206, 178, 66);
+    box-shadow: 0px 0px 19.9px 3px rgba(255, 255, 89, 0.875),
+        0px 0px 55.1px 20px rgba(255, 255, 0, 0.709),
+        0px 0px 250px 50px rgba(255, 255, 0, 0.582),
+        0px 0px 400px 50px rgb(206, 178, 66);
     z-index: 0;
 }
 
@@ -58,8 +58,8 @@ section {
 
 /* Terra */
 .orbit:nth-child(2) {
-    width: 500px;
-    height: 500px;
+    width: 600px;
+    height: 600px;
     animation: orbit 36.5s infinite linear;
 }
 
@@ -89,8 +89,8 @@ section {
 
 /* Mercúrio */
 .orbit:nth-child(3) {
-    width: 250px;
-    height: 250px;
+    width: 240px;
+    height: 240px;
     animation: orbit 8.8s infinite linear;
 }
 
@@ -98,16 +98,16 @@ section {
     background-color: #d49045;
     background-image: radial-gradient(farthest-corner, #d49045 0%, #954003c7 70%, #d49045 100%);
     /* background-color: rgb(146, 124, 120); */
-    width: 20px;
-    height: 20px;
-    margin-top: -10px;
+    width: 12px;
+    height: 12px;
+    margin-top: -6px;
 }
 
 
 /* Vênus */
 .orbit:nth-child(4) {
-    width: 350px;
-    height: 350px;
+    width: 400px;
+    height: 400px;
     animation: orbit 23.4s infinite linear;
 }
 
@@ -122,56 +122,56 @@ section {
 
 /* Marte */
 .orbit:nth-child(5) {
-    width: 650px;
-    height: 650px;
+    width: 800px;
+    height: 800px;
     animation: orbit 68.7s infinite linear;
 }
 
 .orbit:nth-child(5)>div {
     background-color: #a41414;
     background-image: radial-gradient(farthest-corner, #e91818d2 0%, #a41414 70%, #e91818d2 100%);
-    width: 26px;
-    height: 26px;
-    margin-top: -13px;
+    width: 16px;
+    height: 16px;
+    margin-top: -8px;
 }
 
 /* Júpiter */
 .orbit:nth-child(6) {
-    width: 800px;
-    height: 800px;
+    width: 1000px;
+    height: 1000px;
     animation: orbit 432.89s infinite linear;
 }
 
 .orbit:nth-child(6)>div {
     background-color: #FFFFFF;
     background-image: linear-gradient(180deg, #c2adadbf 0%, #5a464699 20%, #c2adadbf 40%, #5a464699 60%, #c2adadbf 80%, #5a464699 90%, #c2adadbf 100%);
-    width: 44px;
-    height: 44px;
-    margin-top: -22px;
+    width: 80px;
+    height: 80px;
+    margin-top: -40px;
 }
 
 /* Saturno */
 .orbit:nth-child(7) {
-    width: 950px;
-    height: 950px;
+    width: 1200px;
+    height: 1200px;
     animation: orbit 1076.75s infinite linear;
 }
 
 .orbit:nth-child(7)>div {
     background-color: rgb(205, 137, 70);
     background-image: radial-gradient(farthest-corner, #d49045 0%, #954003c7 70%, #d49045 100%);
-    width: 32px;
-    height: 32px;
-    margin-top: -16px;
+    width: 60px;
+    height: 60px;
+    margin-top: -30px;
 }
 
 .orbit:nth-child(7)>div::after {
     border: 3px solid rgba(196, 176, 176, 0.911);
     border-right: none;
     border-left-width: 5px;
-    padding: 20px;
+    padding: 40px;
     position: absolute;
-    top: -18%;
+    top: -20%;
     right: -20%;
     content: '';
     transform: rotateY(65deg);
@@ -180,27 +180,27 @@ section {
 
 /* Urano */
 .orbit:nth-child(8) {
-    width: 1100px;
-    height: 1100px;
+    width: 1800px;
+    height: 1800px;
     animation: orbit 1533.0s infinite linear;
 }
 
 .orbit:nth-child(8)>div {
     background-color: rgb(9, 224, 244);
     background-image: radial-gradient(closest-corner, rgb(9, 224, 244) 0%, rgb(12, 76, 81) 70%, rgb(9, 224, 244) 100%);
-    width: 30px;
-    height: 30px;
-    margin-top: -15px;
+    width: 50px;
+    height: 50px;
+    margin-top: -25px;
 }
 
 .orbit:nth-child(8)>div::after {
     border: 3px solid rgba(196, 176, 176, 0.272);
     border-right: none;
     border-left-width: 5px;
-    padding: 20px;
+    padding: 40px;
     position: absolute;
-    top: -20%;
-    right: -20%;
+    top: -40%;
+    right: -40%;
     content: '';
     transform: rotateY(60deg) rotateX(45deg);
     border-radius: 50px;
@@ -208,17 +208,17 @@ section {
 
 /* Netuno */
 .orbit:nth-child(9) {
-    width: 1250px;
-    height: 1250px;
+    width: 2200px;
+    height: 2200px;
     animation: orbit 6018.85s infinite linear;
 }
 
 .orbit:nth-child(9)>div {
     background-color: rgb(23, 37, 141);
     background-image: radial-gradient(farthest-corner, rgb(22, 114, 123) 0%, rgb(23, 37, 141) 70%, rgb(22, 114, 123) 100%);
-    width: 34px;
-    height: 34px;
-    margin-top: -17px;
+    width: 48.8px;
+    height: 48.8px;
+    margin-top: -24.4px;
 }
 
 
