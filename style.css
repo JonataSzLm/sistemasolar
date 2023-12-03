@@ -1,3 +1,36 @@
+:root {
+    --distance-mercury: 166600px;
+    --distance-venus: 311278px;
+    --distance-earth: 430380px;
+    --distance-mars: 655754px;
+    --distance-jupiter: 2239155px;
+    --distance-saturn: 4112198px;
+    --distance-uranus: 8259465px;
+    --distance-neptune: 12958286px;
+    
+    --diameter-sun: 3999px;
+    --diameter-mercury: 15px;
+    --diameter-venus: 35px;
+    --diameter-earth: 37px;
+    --diameter-mars: 20px;
+    --diameter-jupiter: 412px;
+    --diameter-saturn: 347px;
+    --diameter-uranus: 148px;
+    --diameter-neptune: 143px;
+    --diameter-moon: 10px;
+   
+    --day: 1s;
+    --orbit-mercury: 88s;
+    --orbit-venus: 224s;
+    --orbit-earth: 365s;
+    --orbit-mars: 687s;
+    --orbit-jupiter: 4380s;
+    --orbit-saturn: 10950s;
+    --orbit-uranus: 30660s;
+    --orbit-neptune: 60150s;
+    --orbit-moon: 28s;
+}
+
 body {
     width: 100vw;
     height: 100vh;
@@ -65,27 +98,39 @@ section {
 
 
 #earth {
-    animation: orbit 1s infinite linear;
+    /* animation: orbit 1s infinite linear; */
     width: 30px;
     height: 30px;
+    padding: 0;
     margin-top: -15px;
-    background: url('earth.png') rgb(2, 17, 49);
+    background-color: rgb(2, 17, 49);
+    background: url('earth.gif') rgb(2, 17, 49);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 40px;
+    transform: rotateZ(260deg);
 }
 
 #moon {
-    background-color: rgb(218, 218, 218);
-    position: relative;
-    width: 10px;
-    height: 10px;
+    animation: orbit 2.8s infinite linear;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     z-index: 20;
-    top: -18px;
-    box-shadow: 10px 29px 7px 7px rgba(255, 255, 255, 0.5);
+    border: rgba(255, 255, 255, 0.1) solid 1px;
+    position: absolute;
 }
 
+#moon::after {
+    animation: moon 2.8s infinite linear;
+    background-color: #ffffff;
+    background-image: linear-gradient(90deg, #ffffff 10%, rgb(41, 40, 40) 100%);
+    border-radius: 50%;
+    padding: 5px;
+    content: '';
+    position: absolute;
+    margin-top: 5px;
+}
 
 /* Mercúrio */
 .orbit:nth-child(3) {
@@ -227,6 +272,12 @@ section {
 @keyframes orbit {
     100% {
         transform: rotateZ(360deg);
+    }
+}
+
+@keyframes moon {
+    100% {
+        transform: rotateZ(-360deg);
     }
 }
 
