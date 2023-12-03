@@ -1,0 +1,233 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: url('stars.jpg') rgb(5, 5, 15);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+section {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(5, 5, 15, 0.831);
+}
+
+.d-flex-center {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#sun {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: yellow;
+    background-image: radial-gradient(closest-corner, yellow 0%, rgb(255, 255, 89) 50%, yellow 100%);
+    box-shadow: 0px 0px 19.9px rgb(255, 255, 89),
+        0px 0px 55.1px yellow,
+        0px 0px 132.6px yellow,
+        0px 0px 440px yellow,
+        0px 0px 500px 50px rgb(206, 178, 66);
+    z-index: 0;
+}
+
+
+.orbit {
+    border: rgba(255, 255, 255, 0.1) solid 1px;
+    border-radius: 50%;
+    z-index: 5;
+    position: absolute;
+}
+
+.orbit>div {
+    border-radius: 50%;
+    top: 0;
+    left: 50%;
+    position: relative;
+    z-index: 10;
+}
+
+
+/* Terra */
+.orbit:nth-child(2) {
+    width: 500px;
+    height: 500px;
+    animation: orbit 36.5s infinite linear;
+}
+
+
+#earth {
+    animation: orbit 1s infinite linear;
+    width: 30px;
+    height: 30px;
+    margin-top: -15px;
+    background: url('earth.png') rgb(2, 17, 49);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 40px;
+}
+
+#moon {
+    background-color: rgb(218, 218, 218);
+    position: relative;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    z-index: 20;
+    top: -18px;
+    box-shadow: 10px 29px 7px 7px rgba(255, 255, 255, 0.5);
+}
+
+
+/* Mercúrio */
+.orbit:nth-child(3) {
+    width: 250px;
+    height: 250px;
+    animation: orbit 8.8s infinite linear;
+}
+
+.orbit:nth-child(3)>div {
+    background-color: #d49045;
+    background-image: radial-gradient(farthest-corner, #d49045 0%, #954003c7 70%, #d49045 100%);
+    /* background-color: rgb(146, 124, 120); */
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+}
+
+
+/* Vênus */
+.orbit:nth-child(4) {
+    width: 350px;
+    height: 350px;
+    animation: orbit 23.4s infinite linear;
+}
+
+.orbit:nth-child(4)>div {
+    background-color: rgb(164, 92, 20);
+    background-image: radial-gradient(farthest-corner, #d49045 0%, #954003c7 70%, #d49045 100%);
+    width: 26px;
+    height: 26px;
+    margin-top: -14px;
+}
+
+
+/* Marte */
+.orbit:nth-child(5) {
+    width: 650px;
+    height: 650px;
+    animation: orbit 68.7s infinite linear;
+}
+
+.orbit:nth-child(5)>div {
+    background-color: #a41414;
+    background-image: radial-gradient(farthest-corner, #e91818d2 0%, #a41414 70%, #e91818d2 100%);
+    width: 26px;
+    height: 26px;
+    margin-top: -13px;
+}
+
+/* Júpiter */
+.orbit:nth-child(6) {
+    width: 800px;
+    height: 800px;
+    animation: orbit 432.89s infinite linear;
+}
+
+.orbit:nth-child(6)>div {
+    background-color: #FFFFFF;
+    background-image: linear-gradient(180deg, #c2adadbf 0%, #5a464699 20%, #c2adadbf 40%, #5a464699 60%, #c2adadbf 80%, #5a464699 90%, #c2adadbf 100%);
+    width: 44px;
+    height: 44px;
+    margin-top: -22px;
+}
+
+/* Saturno */
+.orbit:nth-child(7) {
+    width: 950px;
+    height: 950px;
+    animation: orbit 1076.75s infinite linear;
+}
+
+.orbit:nth-child(7)>div {
+    background-color: rgb(205, 137, 70);
+    background-image: radial-gradient(farthest-corner, #d49045 0%, #954003c7 70%, #d49045 100%);
+    width: 32px;
+    height: 32px;
+    margin-top: -16px;
+}
+
+.orbit:nth-child(7)>div::after {
+    border: 3px solid rgba(196, 176, 176, 0.911);
+    border-right: none;
+    border-left-width: 5px;
+    padding: 20px;
+    position: absolute;
+    top: -18%;
+    right: -20%;
+    content: '';
+    transform: rotateY(65deg);
+    border-radius: 50px;
+}
+
+/* Urano */
+.orbit:nth-child(8) {
+    width: 1100px;
+    height: 1100px;
+    animation: orbit 1533.0s infinite linear;
+}
+
+.orbit:nth-child(8)>div {
+    background-color: rgb(9, 224, 244);
+    background-image: radial-gradient(closest-corner, rgb(9, 224, 244) 0%, rgb(12, 76, 81) 70%, rgb(9, 224, 244) 100%);
+    width: 30px;
+    height: 30px;
+    margin-top: -15px;
+}
+
+.orbit:nth-child(8)>div::after {
+    border: 3px solid rgba(196, 176, 176, 0.272);
+    border-right: none;
+    border-left-width: 5px;
+    padding: 20px;
+    position: absolute;
+    top: -20%;
+    right: -20%;
+    content: '';
+    transform: rotateY(60deg) rotateX(45deg);
+    border-radius: 50px;
+}
+
+/* Netuno */
+.orbit:nth-child(9) {
+    width: 1250px;
+    height: 1250px;
+    animation: orbit 6018.85s infinite linear;
+}
+
+.orbit:nth-child(9)>div {
+    background-color: rgb(23, 37, 141);
+    background-image: radial-gradient(farthest-corner, rgb(22, 114, 123) 0%, rgb(23, 37, 141) 70%, rgb(22, 114, 123) 100%);
+    width: 34px;
+    height: 34px;
+    margin-top: -17px;
+}
+
+
+
+
+@keyframes orbit {
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
+/* Adicionar texturas, translação na terra, ajustar distancia, tamanho e velociadade da rotação de cada planeta. */
