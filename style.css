@@ -30,7 +30,6 @@
     --orbit-neptune: 60150s;
     --orbit-moon: 28s;
 }
-
 body {
     width: 100vw;
     height: 100vh;
@@ -43,11 +42,17 @@ body {
     background-size: cover;
 }
 
+#space {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(5, 5, 15, 0.831);
+}
+
 section {
+    position: absolute;
     width: 100%;
     height: 100%;
-    background-color: rgba(5, 5, 15, 0.831);
-    /* transform: scale(2); */
 }
 
 .d-flex-center {
